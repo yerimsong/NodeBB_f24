@@ -33,7 +33,7 @@ jobs:
 
       - name: Set up NodeBB
         run: |
-          ./nodebb setup '{"url":"https://nodebb-yerim-test.azurewebsites.net:443",
+          ./nodebb setup '{"url":"https://yerim-test-app-cnfhena0cqgpaqbj.canadacentral-01.azurewebsites.net:443",
             "admin:username": "admin",
             "admin:password": "${{ secrets.ADMIN_PASSWORD }}",
             "admin:password:confirm": "${{ secrets.ADMIN_PASSWORD }}",
@@ -47,7 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "nodebb-yerim-test"
+          app-name: "yerim-test-app"
           slot-name: "Production"
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7987CBBA808B4A44A7974B909CC34E48 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_20C1F0B33A91456EA098EBCEA4AE0AF1 }}
           package: .
