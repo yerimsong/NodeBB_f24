@@ -18,7 +18,7 @@ jobs:
     uses: ./.github/workflows/test.yaml
 
   build-and-deploy:
-    if: github.repository == 'CMU-313/cmu-313-f24-nodebb-f24-NodeBB'
+    if: github.repository == 'yerimsong/NodeBB_f24'
     needs: lint-and-test
 
     runs-on: ubuntu-latest
